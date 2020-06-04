@@ -73,6 +73,9 @@ func main() {
             Title:   clientName,
             Version: clientVersion,
         },
+        SecurityDefinitions: &spec.SecurityDefinitions{
+            "oauth2": spec.OAuth2AccessToken("https://foo.com/authorization", "https://foo.com/token"),
+        },
         OpenAPIDefinitions: []common.GetOpenAPIDefinitions{
             corev1alpha1.GetOpenAPIDefinitions,
             applicationv1alpha1.GetOpenAPIDefinitions,

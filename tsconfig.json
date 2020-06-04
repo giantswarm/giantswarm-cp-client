@@ -9,11 +9,18 @@
     "sourceMap": true,
     "noLib": false,
     "declaration": true,
-    "outDir": "dist",
+    "declarationDir": "./dist",
+    "outDir": "./dist",
+    "incremental": true,
+    "esModuleInterop": true,
     "rootDir": "src",
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "importHelpers": true,
+    "typeRoots": [
+      "./types",
+      "./node_modules/@types"
+    ],
+    //    "importHelpers": true,
     "declarationMap": true
   },
   "exclude": [
@@ -22,7 +29,6 @@
     "dist"
   ],
   "include": [
-    "*.ts",
     "src/**/*"
   ]
 }

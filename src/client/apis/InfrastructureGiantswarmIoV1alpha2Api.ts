@@ -592,6 +592,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/namespaces/{namespace}/awsclusters`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'POST',
@@ -640,6 +649,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/namespaces/{namespace}/awscontrolplanes`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -690,6 +708,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/namespaces/{namespace}/awsmachinedeployments`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'POST',
@@ -738,6 +765,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/namespaces/{namespace}/g8scontrolplanes`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -824,6 +860,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/namespaces/{namespace}/awsclusters`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'DELETE',
@@ -908,6 +953,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/namespaces/{namespace}/awscontrolplanes`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -994,6 +1048,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/namespaces/{namespace}/awsmachinedeployments`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'DELETE',
@@ -1079,6 +1142,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/namespaces/{namespace}/g8scontrolplanes`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'DELETE',
@@ -1135,6 +1207,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/namespaces/{namespace}/awsclusters/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -1193,6 +1274,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/namespaces/{namespace}/awscontrolplanes/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'DELETE',
@@ -1249,6 +1339,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/namespaces/{namespace}/awsmachinedeployments/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -1307,6 +1406,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/namespaces/{namespace}/g8scontrolplanes/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'DELETE',
@@ -1333,6 +1441,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
         const queryParameters: runtime.HTTPQuery = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/`,
@@ -1396,6 +1513,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/awsclusters`,
             method: 'GET',
@@ -1457,6 +1583,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/awscontrolplanes`,
@@ -1520,6 +1655,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/awsmachinedeployments`,
             method: 'GET',
@@ -1581,6 +1725,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/g8scontrolplanes`,
@@ -1648,6 +1801,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/namespaces/{namespace}/awsclusters`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -1713,6 +1875,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/namespaces/{namespace}/awscontrolplanes`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -1780,6 +1951,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/namespaces/{namespace}/awsmachinedeployments`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -1846,6 +2026,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/namespaces/{namespace}/g8scontrolplanes`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -1901,6 +2090,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json-patch+json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/namespaces/{namespace}/awsclusters/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -1959,6 +2157,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json-patch+json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/namespaces/{namespace}/awscontrolplanes/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'PATCH',
@@ -2015,6 +2222,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json-patch+json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/namespaces/{namespace}/awsmachinedeployments/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -2073,6 +2289,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json-patch+json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/namespaces/{namespace}/g8scontrolplanes/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'PATCH',
@@ -2112,6 +2337,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/namespaces/{namespace}/awsclusters/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -2149,6 +2383,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/namespaces/{namespace}/awscontrolplanes/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -2188,6 +2431,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/namespaces/{namespace}/awsmachinedeployments/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -2225,6 +2477,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/namespaces/{namespace}/g8scontrolplanes/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -2277,6 +2538,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/namespaces/{namespace}/awsclusters/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -2331,6 +2601,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/namespaces/{namespace}/awscontrolplanes/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'PUT',
@@ -2384,6 +2663,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/namespaces/{namespace}/awsmachinedeployments/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'PUT',
@@ -2436,6 +2724,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/namespaces/{namespace}/g8scontrolplanes/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -2500,6 +2797,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/watch/awsclusters`,
             method: 'GET',
@@ -2561,6 +2867,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/watch/awscontrolplanes`,
@@ -2624,6 +2939,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/watch/awsmachinedeployments`,
             method: 'GET',
@@ -2685,6 +3009,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/watch/g8scontrolplanes`,
@@ -2756,6 +3089,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/watch/namespaces/{namespace}/awsclusters/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -2821,6 +3163,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/watch/namespaces/{namespace}/awsclusters`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -2892,6 +3243,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/watch/namespaces/{namespace}/awscontrolplanes/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -2957,6 +3317,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/watch/namespaces/{namespace}/awscontrolplanes`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -3028,6 +3397,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/watch/namespaces/{namespace}/awsmachinedeployments/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -3093,6 +3471,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/watch/namespaces/{namespace}/awsmachinedeployments`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -3164,6 +3551,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/watch/namespaces/{namespace}/g8scontrolplanes/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -3229,6 +3625,15 @@ export class InfrastructureGiantswarmIoV1alpha2Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/infrastructure.giantswarm.io/v1alpha2/watch/namespaces/{namespace}/g8scontrolplanes`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),

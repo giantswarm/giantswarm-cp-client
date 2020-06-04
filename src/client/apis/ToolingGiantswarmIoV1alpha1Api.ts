@@ -196,6 +196,15 @@ export class ToolingGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/tooling.giantswarm.io/v1alpha1/namespaces/{namespace}/azuretools`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'POST',
@@ -281,6 +290,15 @@ export class ToolingGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/tooling.giantswarm.io/v1alpha1/namespaces/{namespace}/azuretools`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'DELETE',
@@ -338,6 +356,15 @@ export class ToolingGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/tooling.giantswarm.io/v1alpha1/namespaces/{namespace}/azuretools/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'DELETE',
@@ -364,6 +391,15 @@ export class ToolingGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         const queryParameters: runtime.HTTPQuery = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/tooling.giantswarm.io/v1alpha1/`,
@@ -426,6 +462,15 @@ export class ToolingGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/tooling.giantswarm.io/v1alpha1/azuretools`,
@@ -493,6 +538,15 @@ export class ToolingGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/tooling.giantswarm.io/v1alpha1/namespaces/{namespace}/azuretools`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -549,6 +603,15 @@ export class ToolingGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json-patch+json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/tooling.giantswarm.io/v1alpha1/namespaces/{namespace}/azuretools/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'PATCH',
@@ -587,6 +650,15 @@ export class ToolingGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/tooling.giantswarm.io/v1alpha1/namespaces/{namespace}/azuretools/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -639,6 +711,15 @@ export class ToolingGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/tooling.giantswarm.io/v1alpha1/namespaces/{namespace}/azuretools/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -702,6 +783,15 @@ export class ToolingGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/tooling.giantswarm.io/v1alpha1/watch/azuretools`,
@@ -773,6 +863,15 @@ export class ToolingGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/tooling.giantswarm.io/v1alpha1/watch/namespaces/{namespace}/azuretools/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -838,6 +937,15 @@ export class ToolingGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/tooling.giantswarm.io/v1alpha1/watch/namespaces/{namespace}/azuretools`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),

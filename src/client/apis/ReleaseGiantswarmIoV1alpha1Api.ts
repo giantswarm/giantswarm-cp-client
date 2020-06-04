@@ -159,6 +159,15 @@ export class ReleaseGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/release.giantswarm.io/v1alpha1/releases`,
             method: 'POST',
@@ -240,6 +249,15 @@ export class ReleaseGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/release.giantswarm.io/v1alpha1/releases`,
             method: 'DELETE',
@@ -293,6 +311,15 @@ export class ReleaseGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/release.giantswarm.io/v1alpha1/releases/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))),
             method: 'DELETE',
@@ -319,6 +346,15 @@ export class ReleaseGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         const queryParameters: runtime.HTTPQuery = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/release.giantswarm.io/v1alpha1/`,
@@ -382,6 +418,15 @@ export class ReleaseGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/release.giantswarm.io/v1alpha1/releases`,
             method: 'GET',
@@ -434,6 +479,15 @@ export class ReleaseGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json-patch+json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/release.giantswarm.io/v1alpha1/releases/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))),
             method: 'PATCH',
@@ -468,6 +522,15 @@ export class ReleaseGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/release.giantswarm.io/v1alpha1/releases/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))),
@@ -516,6 +579,15 @@ export class ReleaseGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/release.giantswarm.io/v1alpha1/releases/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))),
@@ -584,6 +656,15 @@ export class ReleaseGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/release.giantswarm.io/v1alpha1/watch/releases/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))),
             method: 'GET',
@@ -645,6 +726,15 @@ export class ReleaseGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/release.giantswarm.io/v1alpha1/watch/releases`,

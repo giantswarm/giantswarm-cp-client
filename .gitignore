@@ -1,3 +1,4 @@
 apiserver.local.config
 generator/giantswarm-cp-client
 node_modules
+.cache

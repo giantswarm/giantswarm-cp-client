@@ -33,6 +33,15 @@ export class ApplicationGiantswarmIoApi extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/application.giantswarm.io/`,
             method: 'GET',

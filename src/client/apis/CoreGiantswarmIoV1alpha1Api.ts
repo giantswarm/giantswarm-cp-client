@@ -1252,6 +1252,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/awsclusterconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'POST',
@@ -1300,6 +1309,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/azureclusterconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -1350,6 +1368,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/certconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'POST',
@@ -1398,6 +1425,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/chartconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -1448,6 +1484,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/drainerconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'POST',
@@ -1496,6 +1541,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/flannelconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -1546,6 +1600,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/ignitions`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'POST',
@@ -1595,6 +1658,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/kvmclusterconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'POST',
@@ -1643,6 +1715,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/storageconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -1729,6 +1810,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/awsclusterconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'DELETE',
@@ -1813,6 +1903,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/azureclusterconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -1899,6 +1998,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/certconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'DELETE',
@@ -1983,6 +2091,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/chartconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -2069,6 +2186,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/drainerconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'DELETE',
@@ -2153,6 +2279,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/flannelconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -2239,6 +2374,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/ignitions`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'DELETE',
@@ -2323,6 +2467,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/kvmclusterconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -2409,6 +2562,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/storageconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'DELETE',
@@ -2465,6 +2627,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/awsclusterconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -2523,6 +2694,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/azureclusterconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'DELETE',
@@ -2579,6 +2759,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/certconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -2637,6 +2826,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/chartconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'DELETE',
@@ -2693,6 +2891,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/drainerconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -2751,6 +2958,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/flannelconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'DELETE',
@@ -2807,6 +3023,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/ignitions/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -2865,6 +3090,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/kvmclusterconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'DELETE',
@@ -2922,6 +3156,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/storageconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'DELETE',
@@ -2948,6 +3191,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         const queryParameters: runtime.HTTPQuery = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/`,
@@ -3011,6 +3263,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/awsclusterconfigs`,
             method: 'GET',
@@ -3072,6 +3333,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/azureclusterconfigs`,
@@ -3135,6 +3405,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/certconfigs`,
             method: 'GET',
@@ -3196,6 +3475,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/chartconfigs`,
@@ -3259,6 +3547,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/drainerconfigs`,
             method: 'GET',
@@ -3320,6 +3617,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/flannelconfigs`,
@@ -3383,6 +3689,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/ignitions`,
             method: 'GET',
@@ -3444,6 +3759,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/kvmclusterconfigs`,
@@ -3511,6 +3835,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/awsclusterconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -3576,6 +3909,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/azureclusterconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -3643,6 +3985,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/certconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -3708,6 +4059,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/chartconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -3775,6 +4135,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/drainerconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -3840,6 +4209,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/flannelconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -3907,6 +4285,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/ignitions`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -3972,6 +4359,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/kvmclusterconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -4039,6 +4435,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/storageconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -4101,6 +4506,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/storageconfigs`,
             method: 'GET',
@@ -4156,6 +4570,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json-patch+json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/awsclusterconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -4214,6 +4637,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json-patch+json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/azureclusterconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'PATCH',
@@ -4270,6 +4702,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json-patch+json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/certconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -4328,6 +4769,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json-patch+json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/chartconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'PATCH',
@@ -4384,6 +4834,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json-patch+json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/drainerconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -4442,6 +4901,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json-patch+json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/flannelconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'PATCH',
@@ -4498,6 +4966,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json-patch+json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/ignitions/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -4556,6 +5033,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json-patch+json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/kvmclusterconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'PATCH',
@@ -4613,6 +5099,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json-patch+json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/storageconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'PATCH',
@@ -4652,6 +5147,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/awsclusterconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -4689,6 +5193,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/azureclusterconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -4728,6 +5241,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/certconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -4765,6 +5287,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/chartconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -4804,6 +5335,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/drainerconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -4841,6 +5381,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/flannelconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -4880,6 +5429,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/ignitions/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -4918,6 +5476,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/kvmclusterconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -4955,6 +5522,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/storageconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -5007,6 +5583,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/awsclusterconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -5061,6 +5646,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/azureclusterconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'PUT',
@@ -5113,6 +5707,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/certconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -5167,6 +5770,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/chartconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'PUT',
@@ -5219,6 +5831,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/drainerconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -5273,6 +5894,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/flannelconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'PUT',
@@ -5325,6 +5955,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/ignitions/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -5379,6 +6018,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/kvmclusterconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'PUT',
@@ -5431,6 +6079,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/namespaces/{namespace}/storageconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -5495,6 +6152,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/watch/awsclusterconfigs`,
             method: 'GET',
@@ -5556,6 +6222,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/watch/azureclusterconfigs`,
@@ -5619,6 +6294,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/watch/certconfigs`,
             method: 'GET',
@@ -5680,6 +6364,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/watch/chartconfigs`,
@@ -5743,6 +6436,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/watch/drainerconfigs`,
             method: 'GET',
@@ -5804,6 +6506,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/watch/flannelconfigs`,
@@ -5867,6 +6578,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/watch/ignitions`,
             method: 'GET',
@@ -5928,6 +6648,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/watch/kvmclusterconfigs`,
@@ -5999,6 +6728,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/watch/namespaces/{namespace}/awsclusterconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -6064,6 +6802,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/watch/namespaces/{namespace}/awsclusterconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -6135,6 +6882,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/watch/namespaces/{namespace}/azureclusterconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -6200,6 +6956,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/watch/namespaces/{namespace}/azureclusterconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -6271,6 +7036,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/watch/namespaces/{namespace}/certconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -6336,6 +7110,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/watch/namespaces/{namespace}/certconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -6407,6 +7190,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/watch/namespaces/{namespace}/chartconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -6472,6 +7264,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/watch/namespaces/{namespace}/chartconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -6543,6 +7344,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/watch/namespaces/{namespace}/drainerconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -6608,6 +7418,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/watch/namespaces/{namespace}/drainerconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -6679,6 +7498,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/watch/namespaces/{namespace}/flannelconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -6744,6 +7572,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/watch/namespaces/{namespace}/flannelconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -6815,6 +7652,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/watch/namespaces/{namespace}/ignitions/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -6880,6 +7726,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/watch/namespaces/{namespace}/ignitions`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -6951,6 +7806,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/watch/namespaces/{namespace}/kvmclusterconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -7016,6 +7880,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/watch/namespaces/{namespace}/kvmclusterconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
@@ -7087,6 +7960,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/watch/namespaces/{namespace}/storageconfigs/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))).replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -7153,6 +8035,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
 
         const headerParameters: runtime.HTTPHeaders = {};
 
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
+
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/watch/namespaces/{namespace}/storageconfigs`.replace(`{${"namespace"}}`, encodeURIComponent(String(requestParameters.namespace))),
             method: 'GET',
@@ -7214,6 +8105,15 @@ export class CoreGiantswarmIoV1alpha1Api extends runtime.BaseAPI {
         }
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.accessToken) {
+            // oauth required
+            if (typeof this.configuration.accessToken === 'function') {
+                headerParameters["Authorization"] = this.configuration.accessToken("oauth2", []);
+            } else {
+                headerParameters["Authorization"] = this.configuration.accessToken;
+            }
+        }
 
         const response = await this.request({
             path: `/apis/core.giantswarm.io/v1alpha1/watch/storageconfigs`,

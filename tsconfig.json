@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "es6",
     "noImplicitAny": false,
     "suppressImplicitAnyIndexErrors": true,
-    "target": "es6",
+    "target": "es5",
     "moduleResolution": "node",
     "removeComments": false,
     "sourceMap": true,
@@ -12,6 +12,12 @@
     "declarationDir": "./dist",
     "outDir": "./dist",
     "incremental": true,
+    "newLine": "lf",
+    "lib": [
+      "dom",
+      "es2018",
+      "scripthost"
+    ],
     "esModuleInterop": true,
     "rootDir": "src",
     "strict": true,

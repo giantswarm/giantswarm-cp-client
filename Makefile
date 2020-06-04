@@ -10,11 +10,11 @@ ts-client: client-prereqs
      	  openapitools/openapi-generator-cli:v4.3.1 generate \
      	  --generator-name typescript-fetch \
      	  --input-spec /repo/api-spec/swagger.json \
-     	  --output /repo/client
+     	  --output /repo/src/client
 
 client-prereqs:
-	rm -rf client
-	mkdir -p client
+	rm -rf src/client
+	mkdir -p src/client
 
 .PHONY: openapi-spec
 openapi-spec: build-generator

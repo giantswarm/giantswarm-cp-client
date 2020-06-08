@@ -1,7 +1,7 @@
 CLIENT_NAME   := giantswarm-cp-client
 API_VERSION := 1.0.0
 
-# Generate ts-client schema
+# Generate TypeScript client.
 .PHONY: ts-client
 ts-client: client-prereqs
 	@echo "Generating OpenAPI TypeScript client"
@@ -12,6 +12,7 @@ ts-client: client-prereqs
      	  --input-spec /repo/api-spec/swagger.json \
      	  --output /repo/src/client
 
+# Client pre-requisites.
 client-prereqs:
 	rm -rf src/client
 	mkdir -p src/client

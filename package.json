@@ -12,7 +12,8 @@
   ],
   "scripts": {
     "build": "rollup -c",
-    "watch": "rollup -cw"
+    "watch": "rollup -cw",
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "rollup": "^2.13.1",

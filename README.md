@@ -18,4 +18,3 @@ To re-generate the spec in this repository based on a specific version of the `c
 1. Set the `SPEC_BRANCH` in the `Makefile` to either `master`, a tag, or a branch name.
 2. Run `make generate`.
 3. Find the updated client in `src/client`.
-4. Run `yarn build` to create a production build.

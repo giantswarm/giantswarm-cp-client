@@ -13,7 +13,7 @@
   "scripts": {
     "build": "rollup -c",
     "watch": "rollup -cw",
-    "prepare": "npm run build"
+    "postinstall": "yarn build"
   },
   "devDependencies": {
     "rollup": "^2.13.1",

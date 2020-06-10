@@ -12,7 +12,8 @@
   ],
   "scripts": {
     "build": "rollup -c",
-    "watch": "rollup -cw"
+    "watch": "rollup -cw",
+    "postinstall": "yarn build"
   },
   "devDependencies": {
     "rollup": "^2.13.1",

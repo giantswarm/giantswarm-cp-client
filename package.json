@@ -20,7 +20,7 @@
   "scripts": {
     "build": "./node_modules/.bin/rollup -c",
     "watch": "./node_modules/.bin/rollup -cw",
-    "postinstall": "yarn build"
+    "postinstall": "npm run build"
   },
   "devDependencies": {
     "rollup": "^2.13.1",

@@ -18,8 +18,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "rollup -c",
-    "watch": "rollup -cw",
+    "build": "./node_modules/.bin/rollup -c",
+    "watch": "./node_modules/.bin/rollup -cw",
     "postinstall": "yarn build"
   },
   "devDependencies": {
